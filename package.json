@@ -2,13 +2,14 @@
   "name": "bipbeep",
   "version": "1.0.0",
   "repository": "git@github.com:cchampou/bipbeep.git",
+  "homepage": "https://cchampou.github.io/bipbeep/",
   "author": "cchampou <clement@champouillon.com>",
   "license": "MIT",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
   "scripts": {
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url .",
     "dev": "parcel src/index.html"
   },
   "dependencies": {

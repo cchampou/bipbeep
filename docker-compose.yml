@@ -2,3 +2,16 @@ version: '3'
 services:
   frontend:
     build: .
+    restart: always
+    labels:
+      - "traefik.frontend.rule=Host:bipbeep.cchampou.me"
+      - "traefik.backend.port=80"
+      - "traefik.enable=true"
+      - "traefik.docker.network=layko_layko_net"
+
+
+
+networks:
+  default:
+    external:
+      name: layko_layko_net

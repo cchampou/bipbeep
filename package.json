@@ -6,10 +6,12 @@
   "author": "cchampou <clement@champouillon.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "serve": "^11.3.0"
   },
   "scripts": {
     "build": "parcel build src/index.html --public-url ./",
+    "start": "serve -s dist",
     "dev": "parcel src/index.html"
   },
   "dependencies": {

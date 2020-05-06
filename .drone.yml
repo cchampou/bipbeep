@@ -22,7 +22,7 @@ steps:
         - build
       when:
         event:
-          - tag
+        - tag
 
 
 volumes:

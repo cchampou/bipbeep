@@ -2,6 +2,7 @@ version: '3'
 services:
   frontend:
     build: .
+    image: bipbeep:latest
     restart: always
     labels:
       - "traefik.frontend.rule=Host:bipbeep.cchampou.me"

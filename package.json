@@ -12,7 +12,7 @@
   "scripts": {
     "build": "parcel build src/index.html --public-url ./",
     "start": "serve -s dist",
-    "dev": "parcel src/index.html"
+    "dev": "parcel serve src/index.html --hmr-port 33033"
   },
   "dependencies": {
     "react": "^16.13.1",

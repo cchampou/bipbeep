@@ -15,6 +15,7 @@
     "dev": "parcel serve src/index.html --hmr-port 33033"
   },
   "dependencies": {
+    "mongodb": "^3.5.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

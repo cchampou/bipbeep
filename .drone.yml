@@ -19,7 +19,7 @@ steps:
     commands:
       - docker-compose -p bipbeep up -d frontend
     depends_on:
-      - build
+      - "build frontend"
     when:
       event:
         - tag

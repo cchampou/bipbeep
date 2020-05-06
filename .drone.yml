@@ -11,6 +11,18 @@ steps:
     volumes:
       - name: docker
         path: /var/run/docker.sock
+  - name: deploy
+      image: docker/compose:1.25.5
+      volumes:
+        - name: docker
+          path: /var/run/docker.sock
+      commands:
+        - docker-compose -p bipbeep up -d frontend
+      depends_on:
+        - build
+      when:
+        event:
+          - tag
 
 
 volumes:

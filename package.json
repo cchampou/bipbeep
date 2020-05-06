@@ -1,0 +1,11 @@
+{
+  "name": "bipbeep",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cchampou/bipbeep.git",
+  "author": "cchampou <clement@champouillon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}

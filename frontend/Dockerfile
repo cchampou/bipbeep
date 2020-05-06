@@ -2,16 +2,16 @@ FROM node:14
 
 EXPOSE 5000
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/frontend
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/frontend
 
-COPY package.json /usr/src/app
-COPY yarn.lock /usr/src/app
+COPY package.json /usr/src/frontend
+COPY yarn.lock /usr/src/frontend
 
 RUN yarn --network-timeout 3600000
 
-COPY . /usr/src/app
+COPY . /usr/src/frontend
 
 RUN yarn build
 

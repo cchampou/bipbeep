@@ -9,6 +9,14 @@ services:
       - "traefik.backend.port=5000"
       - "traefik.enable=true"
       - "traefik.docker.network=layko_layko_net"
+  frontend-dev:
+    build: .
+    command: yarn dev
+  database:
+    image: mongo:3.6.18
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
 
 
 

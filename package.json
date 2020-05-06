@@ -9,6 +9,6 @@
     "lerna": "^3.20.2"
   },
   "scripts": {
-    "prerelease": "lerna version --conventional-commits prerelease"
+    "lerna:version": "lerna version"
   }
 }

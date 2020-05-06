@@ -1,7 +1,10 @@
 {
   "packages": [
     "frontend",
-    "backend"
+    "backend",
+    "."
   ],
+  "conventionalCommits": true,
+  "conventionalPrerelease": true,
   "version": "1.0.0"
 }

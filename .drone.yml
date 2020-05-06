@@ -12,16 +12,16 @@ steps:
     commands:
       - docker build . -t bipbeep:latest
   - name: deploy
-      image: docker/compose:1.25.5
-      volumes:
-        - name: docker
-          path: /var/run/docker.sock
-      commands:
-        - docker-compose -p bipbeep up -d frontend
-      depends_on:
-        - build
-      when:
-        event:
+    image: docker/compose:1.25.5
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    commands:
+      - docker-compose -p bipbeep up -d frontend
+    depends_on:
+      - build
+    when:
+      event:
         - tag
 
 

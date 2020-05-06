@@ -11,7 +11,6 @@ RUN yarn --network-timeout 3600000
 
 COPY . /usr/src/app
 
-RUN ls
 RUN yarn build
 
 CMD yarn start

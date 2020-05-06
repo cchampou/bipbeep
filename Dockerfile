@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14
 
 EXPOSE 5000
 
@@ -14,3 +14,5 @@ RUN yarn --network-timeout 3600000
 COPY . /usr/src/app
 
 RUN yarn build
+
+CMD yarn start

@@ -12,6 +12,10 @@ services:
   frontend-dev:
     build: .
     command: yarn dev
+    expose:
+      - "1234"
+    ports:
+      - "1234:1234"
   database:
     image: mongo:3.6.18
     environment:

@@ -4,13 +4,13 @@ type: docker
 name: CD
 
 steps:
-  - name: build
-    image: docker:19.03
+  - name: build frontend
+    image: docker/compose:1.25.5
     volumes:
       - name: docker
         path: /var/run/docker.sock
     commands:
-      - docker build . -t bipbeep:latest
+      - docker-compose build frontend
   - name: deploy
     image: docker/compose:1.25.5
     volumes:
@@ -19,7 +19,7 @@ steps:
     commands:
       - docker-compose -p bipbeep up -d frontend
     depends_on:
-      - build
+      - "build frontend"
     when:
       event:
         - tag
